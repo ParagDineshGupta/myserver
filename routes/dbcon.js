@@ -5,7 +5,8 @@ module.exports ={
     host: "mydbinstance.cq4rkzpvmufw.ap-south-1.rds.amazonaws.com",
     user: "parag",
     password: "equipshare",
-    database: "equip"
+    database: "equip",
+  multipleStatements: true
 
 }
 
