@@ -2,20 +2,10 @@ var express = require('express');
 var router = express.Router();
 var url = require('url');
 var mysql = require('mysql');
+var dbcon = require('./dbcon');
+var con = mysql.createConnection(dbcon.con);
 var qs = require('querystring');
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "equip",
-     multipleStatements: true
 
-});
-con.connect(function (err) {
-    if (err) throw err;
-    console.log('conected');
-
-});
 var dateTime = require('node-datetime');
 var dt = dateTime.create();
 var formatted = dt.format('Y-m-d H:M:S');
