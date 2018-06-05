@@ -12,10 +12,10 @@ var con = mysql.createConnection(dbcon.con);
 router.get('/', function(req, res, next) {
 
 
-    var sql2 = "SELECT * FROM customer where action='unchecked'";
+    var sql2 = "SELECT * FROM customer_info";
     con.query(sql2, function (err, result) {
         if (err) {
-            throw err;
+            
             res.end('error');
         }
         else {
